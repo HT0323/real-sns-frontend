@@ -70,3 +70,21 @@
   left: 0;
   border: 2px solid white;
 }
+
+.promotionTitle {
+  font-size: 18px;
+  font-weight: 550;
+  margin-bottom: -10px;
+}
+
+.rightbarPromotionImg {
+  width: 85%;
+  border-radius: 10px;
+  margin: 25px 0;
+}
+
+.promotionName {
+  font-size: small;
+  color: rgb(39, 37, 37);
+  margin-top: -20px;
+}
