@@ -2,6 +2,7 @@ import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import ChatIcon from "@mui/icons-material/Chat";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import "./Topbar.css";
 
 export default function Topbar() {
   return (
@@ -20,20 +21,22 @@ export default function Topbar() {
         </div>
       </div>
       <div className="topbarRight">
-        <div className="topbarIconItem">
-          <ChatIcon />
-          <span className="topbarIconBadge">1</span>
-        </div>
-        <div className="topbarIconItem">
-          <NotificationsIcon />
-          <span className="topbarIconBadge">2</span>
+        <div className="topbarItemIcons">
+          <div className="topbarIconItem">
+            <ChatIcon />
+            <span className="topbarIconBadge">1</span>
+          </div>
+          <div className="topbarIconItem">
+            <NotificationsIcon />
+            <span className="topbarIconBadge">2</span>
+          </div>
+          <img
+            src="/assets/person/人物アイコン.jpeg"
+            alt=""
+            className="topbarImg"
+          />
         </div>
       </div>
-      <img
-        src="/assets/person/人物アイコン.jpeg"
-        alt=""
-        className="topbarImg"
-      />
     </div>
   );
 }
