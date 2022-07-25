@@ -8,6 +8,7 @@ import {
   Search,
   Settings,
 } from "@mui/icons-material";
+import "./Sidebar.css";
 
 export default function Sidebar() {
   return (
@@ -52,6 +53,22 @@ export default function Sidebar() {
               className="sidebarFriendImg"
             />
             <span className="sidebarFriendName">test</span>
+          </li>
+          <li className="sidebarFriend">
+            <img
+              src="/assets/person/3.jpeg"
+              alt=""
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">test123</span>
+          </li>
+          <li className="sidebarFriend">
+            <img
+              src="/assets/person/4.jpeg"
+              alt=""
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">testzxc</span>
           </li>
         </ul>
       </div>
