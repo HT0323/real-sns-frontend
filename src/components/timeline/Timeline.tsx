@@ -1,4 +1,5 @@
 import React from "react";
+import Share from "../share/Share";
 import "./Timeline.css";
 
 export default function Timeline() {
