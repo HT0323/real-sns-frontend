@@ -2,7 +2,6 @@ import { MoreVert } from "@mui/icons-material";
 import React, { FC } from "react";
 import "./Post.css";
 import { Users } from "../../dummyData";
-import userEvent from "@testing-library/user-event";
 
 type PostProps = {
   id: number;
