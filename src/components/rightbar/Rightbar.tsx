@@ -65,8 +65,6 @@ export const Rightbar: FC<{ profileFlag: ProfileProps }> = ({
               />
               <span className="rightbarFollowingName">sssss</span>
             </div>
-          </div>
-          <div className="rightbarFollowings">
             <div className="rightbarFollowing">
               <img
                 src="assets/person/2.jpeg"
@@ -75,8 +73,6 @@ export const Rightbar: FC<{ profileFlag: ProfileProps }> = ({
               />
               <span className="rightbarFollowingName">xxxx</span>
             </div>
-          </div>
-          <div className="rightbarFollowings">
             <div className="rightbarFollowing">
               <img
                 src="assets/person/3.jpeg"
@@ -85,8 +81,6 @@ export const Rightbar: FC<{ profileFlag: ProfileProps }> = ({
               />
               <span className="rightbarFollowingName">rrrrr</span>
             </div>
-          </div>
-          <div className="rightbarFollowings">
             <div className="rightbarFollowing">
               <img
                 src="assets/person/4.jpeg"
