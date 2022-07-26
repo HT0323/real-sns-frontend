@@ -1,12 +1,16 @@
-import React from "react";
+import React, { FC } from "react";
 import "./Rightbar.css";
 import { Users } from "../../dummyData";
 import { Online } from "../online/Online";
 
-export default function Rightbar() {
-  return (
-    <div className="rightbar">
-      <div className="rightbarWrapper">
+type ProfileProps = boolean;
+
+export const Rightbar: FC<{ profileFlag: ProfileProps }> = ({
+  profileFlag,
+}) => {
+  const HomeRightBar = () => {
+    return (
+      <>
         <div className="eventContainer">
           <img src="./assets/star.png" alt="" className="starImg" />
           <span className="eventText">
@@ -39,7 +43,18 @@ export default function Rightbar() {
           className="rightbarPromotionImg"
         />
         <p className="promotionName">test株式会社</p>
+      </>
+    );
+  };
+  const ProfileRightbar = () => {
+    return <>dddddd</>;
+  };
+
+  return (
+    <div className="rightbar">
+      <div className="rightbarWrapper">
+        {profileFlag ? <ProfileRightbar /> : <HomeRightBar />}
       </div>
     </div>
   );
-}
+};
