@@ -47,7 +47,58 @@ export const Rightbar: FC<{ profileFlag: ProfileProps }> = ({
     );
   };
   const ProfileRightbar = () => {
-    return <>dddddd</>;
+    return (
+      <>
+        <h4 className="rightbarTitle">ユーザー情報</h4>
+        <div className="rightbarInfo">
+          <div className="rightbarInfoItem">
+            <span className="rightbarInfoKey">出身:</span>
+            <span className="rightbarInfoKey">福岡:</span>
+          </div>
+          <h4 className="rightbarTitle">あなたの友達</h4>
+          <div className="rightbarFollowings">
+            <div className="rightbarFollowing">
+              <img
+                src="assets/person/1.jpeg"
+                alt=""
+                className="rightbarFollowingImg"
+              />
+              <span className="rightbarFollowingName">sssss</span>
+            </div>
+          </div>
+          <div className="rightbarFollowings">
+            <div className="rightbarFollowing">
+              <img
+                src="assets/person/2.jpeg"
+                alt=""
+                className="rightbarFollowingImg"
+              />
+              <span className="rightbarFollowingName">xxxx</span>
+            </div>
+          </div>
+          <div className="rightbarFollowings">
+            <div className="rightbarFollowing">
+              <img
+                src="assets/person/3.jpeg"
+                alt=""
+                className="rightbarFollowingImg"
+              />
+              <span className="rightbarFollowingName">rrrrr</span>
+            </div>
+          </div>
+          <div className="rightbarFollowings">
+            <div className="rightbarFollowing">
+              <img
+                src="assets/person/4.jpeg"
+                alt=""
+                className="rightbarFollowingImg"
+              />
+              <span className="rightbarFollowingName">nnnnn</span>
+            </div>
+          </div>
+        </div>
+      </>
+    );
   };
 
   return (
