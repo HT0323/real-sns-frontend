@@ -1,0 +1,7 @@
+.profile {
+  display: flex;
+}
+
+.profileRight {
+  flex: 10.5;
+}
