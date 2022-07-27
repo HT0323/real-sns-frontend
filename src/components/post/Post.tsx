@@ -31,13 +31,21 @@ export const Post: FC<{ post: PostProps }> = ({ post }) => {
     setLike(isLiked ? like - 1 : like + 1);
     setIsLiked(!isLiked);
   };
+  const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER;
 
   return (
     <div className="post">
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
-            <img src={user.profilePicture} alt="" className="postProfileImg" />
+            <img
+              src={
+                PUBLIC_FOLDER +
+                Users.filter((user) => user.id === post.id)[0].profilePicture
+              }
+              alt=""
+              className="postProfileImg"
+            />
             <span className="postUserName">{user.username}</span>
             <span className="postDate">{post.date}</span>
           </div>
@@ -48,12 +56,12 @@ export const Post: FC<{ post: PostProps }> = ({ post }) => {
 
         <div className="postCenter">
           <span className="postText">{post.desc}</span>
-          <img src={post.photo} alt="" className="postImg" />
+          <img src={PUBLIC_FOLDER + post.photo} alt="" className="postImg" />
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
             <img
-              src="./assets/heart.png"
+              src={PUBLIC_FOLDER + "/heart.png"}
               alt=""
               className="likeIcon"
               onClick={() => handleLike()}

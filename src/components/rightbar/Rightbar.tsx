@@ -9,6 +9,8 @@ export const Rightbar: FC<{ profileFlag: ProfileProps }> = ({
   profileFlag,
 }) => {
   const HomeRightBar = () => {
+    const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER;
+
     return (
       <>
         <div className="eventContainer">
@@ -26,19 +28,19 @@ export const Rightbar: FC<{ profileFlag: ProfileProps }> = ({
         </ul>
         <p className="promotionTitle">プロモーション広告</p>
         <img
-          src="assets/promotion/promotion1.jpeg"
+          src={PUBLIC_FOLDER + "promotion/promotion1.jpeg"}
           alt=""
           className="rightbarPromotionImg"
         />
         <p className="promotionName">ショッピング</p>
         <img
-          src="assets/promotion/promotion2.jpeg"
+          src={PUBLIC_FOLDER + "promotion/promotion2.jpeg"}
           alt=""
           className="rightbarPromotionImg"
         />
         <p className="promotionName">カーショップ</p>
         <img
-          src="assets/promotion/promotion3.jpeg"
+          src={PUBLIC_FOLDER + "promotion/promotion3.jpeg"}
           alt=""
           className="rightbarPromotionImg"
         />
@@ -47,6 +49,8 @@ export const Rightbar: FC<{ profileFlag: ProfileProps }> = ({
     );
   };
   const ProfileRightbar = () => {
+    const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER;
+
     return (
       <>
         <h4 className="rightbarTitle">ユーザー情報</h4>
@@ -59,7 +63,7 @@ export const Rightbar: FC<{ profileFlag: ProfileProps }> = ({
           <div className="rightbarFollowings">
             <div className="rightbarFollowing">
               <img
-                src="assets/person/1.jpeg"
+                src={PUBLIC_FOLDER + "/person/1.jpeg"}
                 alt=""
                 className="rightbarFollowingImg"
               />
@@ -67,7 +71,7 @@ export const Rightbar: FC<{ profileFlag: ProfileProps }> = ({
             </div>
             <div className="rightbarFollowing">
               <img
-                src="assets/person/2.jpeg"
+                src={PUBLIC_FOLDER + "/person/2.jpeg"}
                 alt=""
                 className="rightbarFollowingImg"
               />
@@ -75,7 +79,7 @@ export const Rightbar: FC<{ profileFlag: ProfileProps }> = ({
             </div>
             <div className="rightbarFollowing">
               <img
-                src="assets/person/3.jpeg"
+                src={PUBLIC_FOLDER + "/person/3.jpeg"}
                 alt=""
                 className="rightbarFollowingImg"
               />
@@ -83,7 +87,7 @@ export const Rightbar: FC<{ profileFlag: ProfileProps }> = ({
             </div>
             <div className="rightbarFollowing">
               <img
-                src="assets/person/4.jpeg"
+                src={PUBLIC_FOLDER + "/person/4.jpeg"}
                 alt=""
                 className="rightbarFollowingImg"
               />
