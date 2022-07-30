@@ -12,6 +12,7 @@ type PostProps = {
   userId: string;
   like?: number;
   comment?: number;
+  img: string;
 };
 
 type userProps = {
@@ -91,11 +92,7 @@ export const Post: FC<{ post: PostProps }> = ({ post }) => {
 
         <div className="postCenter">
           <span className="postText">{post.desc}</span>
-          <img
-            src={post.photo && PUBLIC_FOLDER + post.photo}
-            alt=""
-            className="postImg"
-          />
+          <img src={PUBLIC_FOLDER + post.img} alt="" className="postImg" />
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">

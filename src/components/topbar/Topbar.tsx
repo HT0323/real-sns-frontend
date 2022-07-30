@@ -33,11 +33,7 @@ export default function Topbar() {
             <NotificationsIcon />
             <span className="topbarIconBadge">2</span>
           </div>
-          <img
-            src="/assets/person/人物アイコン.jpeg"
-            alt=""
-            className="topbarImg"
-          />
+          <img src="/assets/person/5.jpeg" alt="" className="topbarImg" />
         </div>
       </div>
     </div>
