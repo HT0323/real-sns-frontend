@@ -2,7 +2,7 @@ import { MoreVert } from "@mui/icons-material";
 import axios from "axios";
 import React, { FC, useEffect, useState } from "react";
 import "./Post.css";
-// import { Users } from "../../dummyData";
+import { format } from "timeago.js";
 
 type PostProps = {
   _id: string;
@@ -13,6 +13,8 @@ type PostProps = {
   likes: [];
   comment?: number;
   img: string;
+  createdAt: string;
+  updatedAt: string;
 };
 
 type userProps = {
@@ -83,7 +85,7 @@ export const Post: FC<{ post: PostProps }> = ({ post }) => {
               className="postProfileImg"
             />
             <span className="postUserName">{user.username}</span>
-            <span className="postDate">{post.date}</span>
+            <span className="postDate">{format(post.createdAt)}</span>
           </div>
           <div className="postTopRight">
             <MoreVert />

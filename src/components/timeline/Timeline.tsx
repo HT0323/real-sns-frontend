@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { Post } from "../post/Post";
 import Share from "../share/Share";
 import "./Timeline.css";
-// import { Posts } from "../../dummyData";
 
 type PostStruct = {
   _id: string;
@@ -11,6 +10,8 @@ type PostStruct = {
   desc: string;
   img: string;
   likes: [];
+  createdAt: string;
+  updatedAt: string;
 };
 
 export default function Timeline() {
