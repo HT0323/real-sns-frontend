@@ -10,7 +10,7 @@ type PostProps = {
   photo?: string;
   date?: string;
   userId: string;
-  like?: number;
+  likes: [];
   comment?: number;
   img: string;
 };
@@ -36,7 +36,7 @@ type UserStruct = {
 };
 
 export const Post: FC<{ post: PostProps }> = ({ post }) => {
-  const [like, setLike] = useState(post.like);
+  const [like, setLike] = useState<number>(post.likes.length);
   const [isLiked, setIsLiked] = useState(false);
   const [user, setUser] = useState<UserStruct>({
     username: "",
@@ -65,7 +65,7 @@ export const Post: FC<{ post: PostProps }> = ({ post }) => {
   // )[0];
 
   const handleLike = () => {
-    setLike(isLiked ? like && like - 1 : like && like + 1);
+    setLike(isLiked ? like - 1 : like + 1);
     setIsLiked(!isLiked);
   };
   const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER;
