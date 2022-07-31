@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { Post } from "../post/Post";
 import Share from "../share/Share";
 import "./Timeline.css";
@@ -14,13 +14,15 @@ type PostStruct = {
   updatedAt: string;
 };
 
-export default function Timeline() {
+type UsernameProps = string;
+
+export const Timeline: FC<{ username: UsernameProps }> = ({ username }) => {
   const [posts, setPosts] = useState<PostStruct[]>([]);
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await axios.get(
-        "/posts/timeline/62dc0a036c45e01e67c8f254"
-      );
+      const response = username
+        ? await axios.get(`/posts/profile/${username}`)
+        : await axios.get("/posts/timeline/62dc0a036c45e01e67c8f254");
       setPosts(response.data);
     };
     fetchPosts();
@@ -36,4 +38,4 @@ export default function Timeline() {
       </div>
     </div>
   );
-}
+};

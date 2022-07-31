@@ -1,7 +1,7 @@
 import React from "react";
 import { Rightbar } from "../../components/rightbar/Rightbar";
 import Sidebar from "../../components/sidebar/Sidebar";
-import Timeline from "../../components/timeline/Timeline";
+import { Timeline } from "../../components/timeline/Timeline";
 import Topbar from "../../components/topbar/Topbar";
 import "./Profile.css";
 
@@ -32,7 +32,7 @@ export const Profile = () => {
             </div>
           </div>
           <div className="profileRightBottom">
-            <Timeline />
+            <Timeline username="test123" />
             <Rightbar profileFlag={true} />
           </div>
         </div>
